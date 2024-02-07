@@ -1,0 +1,45 @@
+# My aliases
+
+alias h='cd ~/hg; ls'
+alias jennic='cd ~/hg/jennic; ls'
+alias pancoordinator='cd ~/hg/jennic/src/pancoordinator; ls'
+alias concentrator='cd ~/hg/jennic/src/concentrator; ls'
+alias o='cd ~/hg/oxycontroller; ls'
+alias b='cd ~/hg/boya; ls'
+alias m='cd ~/hg/microlib2; ls'
+alias z='cd ~/zephyrproject/zephyr; ls'
+alias s='ssh caicai.innovex.cl'
+alias v='nvim'
+alias vim='nvim'
+alias c='clear'
+alias p='ping 1.1.1.1'
+alias codigopostal='echo 5110853 | xclip -selection c'
+alias mc='make clean; clear'
+
+# minicom
+alias m1='minicom -b 115200 -D /dev/ttyUSB0'
+alias m9='minicom -b 9600 -D /dev/ttyUSB0'
+# navigation
+alias ..='cd ..' 
+alias ...='cd ../..'
+
+# Changing "ls" to "exa"
+alias ls='exa -al --color=always --group-directories-first' # my preferred listing
+alias la='exa -a --color=always --group-directories-first'  # all files and dirs
+alias ll='exa -l --color=always --group-directories-first'  # long format
+alias lt='exa -aT --color=always --group-directories-first' # tree listing
+
+# adding flags
+alias cp="cp -i"                          # confirm before overwriting something
+alias mv="mv -i"                          # confirm before overwriting something
+alias df='df -h'                          # human-readable sizes
+alias free='free -m'                      # show sizes in MB
+
+#alias history="history -1000"
+alias hr="history | rg "
+
+# clang format Google style
+alias create-style='clang-format --style=Google --dump-config > .clang-format'
+
+#dotfiles bare repo
+alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'

@@ -1,0 +1,33 @@
+[user]
+	name = Felipe Gallardo
+	email = fgallardo@innovex.cl
+[core]
+	excludesfile = /home/felipe/.gitignore
+	editor = nvim
+[init]
+	defaultBranch = main
+[merge]
+	tool = kdiff3
+[mergetool]
+	prompt = false
+	keepBackup = false
+	keepTemporaries = false
+[mergetool "kdiff3"]
+	trustExitCode = false
+	cmd = kdiff3 --L1 \"$MERGED (Base)\" --L2 \"$MERGED (Local)\" --L3 \"$MERGED (Remote)\" -o \"$MERGED\" \"$BASE\" \"$LOCAL\" \"$REMOTE\"
+[diff]
+	tool = kdiff3
+[difftool]
+	prompt = false
+[difftool "kdiff3"]
+	trustExitCode = false
+	cmd = kdiff3 --L1 \"$MERGED (Local)\" --L2 \"$MERGED (Remote)\" \"$LOCAL\" \"$REMOTE\"
+[alias]
+lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'
+lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
+lg = !"git lg2 --all -n 15"
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

@@ -1,0 +1,1 @@
+changeset = "*{label('custom.rev', rev)}:{label('custom.rev', node|short)} {label('custom.decorate',branch)} <{label('custom.author' ,author)}>({label('custom.date',date|age)})\t\n{desc|strip|firstline}\n"

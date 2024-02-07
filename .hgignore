@@ -1,0 +1,9 @@
+syntax: glob
+*]
+*.img
+*.cfg
+*.gcda
+*.gcno
+*.o
+*.pyc
+*compile_flags.txt*
