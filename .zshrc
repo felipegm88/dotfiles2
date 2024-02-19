@@ -74,10 +74,16 @@ export MANPAGER="/bin/sh -c \"col -b | vim --not-a-term -c 'set ft=man ts=8 nomo
 
 # Load zsh-syntax-highlighting; should be last.
 # NOTE: all this is installed with paru
+
+# powerlevel theme
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+# if u didnt use an alias, this reminds u
 source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
+# autosuggestion ctrl+space
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+# highlights
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# history ctrl+j or ctrl+k to navigate
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 # autosuggestion new key
