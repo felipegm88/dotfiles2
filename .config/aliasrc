@@ -1,12 +1,12 @@
 # My aliases
 
 alias h='cd ~/hg; ls'
+alias g='cd ~/git; ls'
 alias jennic='cd ~/hg/jennic; ls'
 alias pancoordinator='cd ~/hg/jennic/src/pancoordinator; ls'
 alias concentrator='cd ~/hg/jennic/src/concentrator; ls'
-alias o='cd ~/hg/oxycontroller; ls'
-alias b='cd ~/hg/boya; ls'
-alias m='cd ~/hg/microlib2; ls'
+alias o='cd ~/git/oxycontroller; ls'
+alias m='cd ~/git/microlib2; ls'
 alias z='cd ~/zephyrproject/zephyr; ls'
 alias s='ssh caicai.innovex.cl'
 alias v='nvim'
@@ -19,9 +19,11 @@ alias mc='make clean; clear'
 # minicom
 alias m1='minicom -b 115200 -D /dev/ttyUSB0'
 alias m9='minicom -b 9600 -D /dev/ttyUSB0'
+alias ma='minicom -D /dev/ttyACM0'
 # navigation
 alias ..='cd ..' 
 alias ...='cd ../..'
+alias ....='cd ../../..'
 
 # Changing "ls" to "exa"
 alias ls='exa -al --color=always --group-directories-first' # my preferred listing
@@ -36,10 +38,10 @@ alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 
 #alias history="history -1000"
-alias hr="history | rg "
+alias hr="history -1000 | rg "
+
+# rg+fzf
+alias rgfzf="rg . | fzf -e -0"
 
 # clang format Google style
 alias create-style='clang-format --style=Google --dump-config > .clang-format'
-
-#dotfiles bare repo
-alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
